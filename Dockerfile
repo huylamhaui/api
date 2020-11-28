@@ -12,6 +12,6 @@ FROM openjdk
 
 WORKDIR /usr/app/
 
-COPY --from=buildJar /usr/source.api .
+COPY --from=buildJar /usr/source/api .
 
 CMD [ "java", "-jar", "api.jar" ]
