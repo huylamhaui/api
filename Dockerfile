@@ -8,7 +8,7 @@ RUN mvn clean package
 
 
 
-FROM java
+FROM openjdk
 
 WORKDIR /usr/app/
 
