@@ -12,7 +12,7 @@ FROM openjdk
 
 WORKDIR /opt/app/
 
-COPY --from=buildJar /opt/source/api .
+COPY --from=buildJar /opt/source/api/target .
 
 RUN ls
 
