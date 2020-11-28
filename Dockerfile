@@ -1,6 +1,6 @@
 FROM maven as buildJar
 
-WORKDIR /usr/source/api
+WORKDIR /opt/source/api
 
 COPY . .
 
@@ -10,8 +10,8 @@ RUN mvn clean package
 
 FROM openjdk
 
-WORKDIR /usr/app/
+WORKDIR /opt/app/
 
-COPY --from=buildJar /usr/source/api .
+COPY --from=buildJar /opt/source/api .
 
 CMD [ "java", "-jar", "api.jar" ]
