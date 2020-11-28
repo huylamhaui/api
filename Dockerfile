@@ -14,4 +14,6 @@ WORKDIR /opt/app/
 
 COPY --from=buildJar /opt/source/api .
 
+RUN ls
+
 CMD [ "java", "-jar", "api.jar" ]
